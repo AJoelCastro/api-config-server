@@ -1,0 +1,12 @@
+server:
+  port: 8170
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8167/eureka/

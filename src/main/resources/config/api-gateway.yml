@@ -1,0 +1,17 @@
+server:
+  port: 8169
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8167/eureka/
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: api-structured-output-service
+              uri: lb://api-structured-output-service
+              predicates:
+                - Path=/api/openai/structured-output/**
