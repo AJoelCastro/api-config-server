@@ -15,3 +15,7 @@ spring:
               uri: lb://api-structured-output-service
               predicates:
                 - Path=/api/openai/structured-output/**
+            - id: api-text-generation-service
+              uri: lb://api-text-generation-service
+              predicates:
+                - Path=/api/openai/text-generation-service
