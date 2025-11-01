@@ -18,4 +18,8 @@ spring:
             - id: api-text-generation-service
               uri: lb://api-text-generation-service
               predicates:
-                - Path=/api/openai/text-generation-service
+                - Path=/api/openai/text-generation/**
+            - id: api-audio-speech-service
+              uri: lb://api-audio-speech-service
+              predicates:
+                - Path=/api/openai/audio-speech/**
