@@ -23,3 +23,7 @@ spring:
               uri: lb://api-audio-speech-service
               predicates:
                 - Path=/api/openai/audio-speech/**
+            - id: api-audio-speech-ws
+              uri: lb://api-audio-speech-service
+              predicates:
+                - Path=/ws/voice
