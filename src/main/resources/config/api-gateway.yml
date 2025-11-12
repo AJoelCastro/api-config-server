@@ -27,3 +27,7 @@ spring:
               uri: lb://api-audio-speech-service
               predicates:
                 - Path=/ws/voice
+            - id: api-images-vision-service
+              uri: lb://api-images-vision-service
+              predicates:
+                - Path=/api/openai/images-vision/**
