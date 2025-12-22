@@ -31,3 +31,7 @@ spring:
               uri: lb://api-images-vision-service
               predicates:
                 - Path=/api/openai/images-vision/**
+            - id: api-agent-service
+              uri: lb://api-agent-service
+              predicates:
+                  - Path=/api/openai/agent/**
